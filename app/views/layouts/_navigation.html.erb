@@ -20,9 +20,15 @@
   </nav>
   <ul id="dropdown1" class="dropdown-content">
     <li><%= session_link %></li>
+    <% if logged_in? %>
+      <li><%= link_to "Profile", student_path(current_user) %></li>
+    <% end %>
   </ul>
   <ul id="dropdown2" class="dropdown-content">
     <li><%= session_link %></li>
+    <% if logged_in? %>
+      <li><%= link_to "Profile", student_path(current_user) %></li>
+    <% end %>
   </ul>
   <ul class="sidenav" id="mobile-demo">
     <li><%= link_to "Courses", root_path %></li>
